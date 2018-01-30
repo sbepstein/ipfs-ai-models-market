@@ -19,14 +19,14 @@ function createWindow () {
     height: 600,
     icon: 'img/darkID-logo-white.png'
   })
-  tray = new Tray('img/darkID-logo-white.png')
+  tray = new Tray('img/icon.png')
   const contextMenu = Menu.buildFromTemplate([
     {label: 'Obre la finestra', type: 'radio'},
     {label: 'javascript madness', type: 'radio'},
     {label: 'Tanca', type: 'radio'}
     //{label: 'Tanca', type: 'radio', checked: true}
   ])
-  tray.setToolTip('Panopticon, projectNSA')
+  tray.setToolTip('ipfs-ai-models-market')
   tray.setContextMenu(contextMenu)
 
   mainWindow.setMenu(null);

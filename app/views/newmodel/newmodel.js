@@ -19,7 +19,7 @@ angular.module('app.newmodel', ['ngRoute'])
       formdata.append("file", $scope.file);
 
       //add the file to ipfs
-      $http({
+      /*$http({
           url: ipfs_url + 'add',
           method: "POST",
           headers: {
@@ -35,10 +35,12 @@ angular.module('app.newmodel', ['ngRoute'])
           function(data) {
             console.log(data);
             toastr.error("Error adding Model to IPFS");
-          });
+          });*/
 
       //add the data to blockchain
+      ipcRenderer.send('newmodel', $scope.model);
 
+      
     };
 
 

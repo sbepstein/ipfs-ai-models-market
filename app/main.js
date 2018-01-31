@@ -15,9 +15,9 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 850,
-    height: 600,
-    icon: 'img/darkID-logo-white.png'
+    width: 1000,
+    height: 650,
+    icon: 'img/icon.png'
   })
   tray = new Tray('img/icon.png')
   const contextMenu = Menu.buildFromTemplate([
@@ -29,7 +29,7 @@ function createWindow () {
   tray.setToolTip('ipfs-ai-models-market')
   tray.setContextMenu(contextMenu)
 
-  mainWindow.setMenu(null);
+  //mainWindow.setMenu(null);
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`)
@@ -70,3 +70,6 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+// Listen for async message from renderer process
+
+var electronComm = require('./electronCommunication');

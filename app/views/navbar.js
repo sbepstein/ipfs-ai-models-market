@@ -10,10 +10,10 @@ angular.module('app.navbar', ['ngRoute'])
     }])
 
     .controller('NavbarCtrl', function($scope, $rootScope, $http, $routeParams, $location) {
-
         $scope.logout = function() {
             localStorage.removeItem("ipfs-ai-models-market-data");
             window.location.reload();
         };
 
+        ipcRenderer.send('getuser', '');
     });

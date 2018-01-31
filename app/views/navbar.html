@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#!/" title="darkID">
-                    <i title="Server" class="fa fa-cube fa-1x"></i> ipfs-ai-market
+                    <i title="Server" class="fa fa-cube fa-1x"></i> ipfs-ai-models-market
                 </a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav navbar-right" ng-show="user"><!--logged-->
                     <li>
                         <a href="">
-                            <i title="User" class="fa fa-user fa-1x"></i> {{user.email}}
+                            <i title="User" class="fa fa-user fa-1x"></i> {{user.username}}
                         </a>
                     </li>
                     <li>
@@ -33,13 +33,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" ng-show="!user"><!--unlogged-->
                     <li>
-                        <a title="">
-                            <i title="Signup" class="fa fa-user-plus fa-1x"></i> Signup
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i title="Login" class="fa fa-sign-in fa-1x"></i> Login
+                        <a href="#!/newuser">
+                            <i title="Create Account" class="fa fa-sign-in fa-1x"></i> Create Account
                         </a>
                     </li>
                 </ul>

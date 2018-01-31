@@ -9,6 +9,7 @@ angular.module('app', [
     'toastr',
     'chart.js',
     'app.navbar',
+    'app.newuser',
     'app.main',
     'app.newmodel'
 ]).

@@ -21,13 +21,13 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" ng-show="user"><!--logged-->
                     <li>
-                        <a href="">
-                            <i title="User" class="fa fa-user fa-1x"></i> {{user.username}}
+                        <a href="" ng-click="logout()">
+                            Remove user (development)
                         </a>
                     </li>
                     <li>
-                        <a href="" ng-click="logout()">
-                            <i title="Exit" class="fa fa-power-off fa-1x"></i>
+                        <a href="#!/profile">
+                            <i title="User" class="fa fa-user fa-1x"></i> {{user.username}}
                         </a>
                     </li>
                 </ul>

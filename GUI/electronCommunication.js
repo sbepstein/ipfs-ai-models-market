@@ -1,8 +1,9 @@
 const {ipcMain, ipcRenderer, remote} = require('electron');
 //var main = remote.require("./main.js");
 
-
+var rsa = require('./rsaController');
 var fs = require('fs');
+
 function saveFile(filepath, data) {
   fs.writeFile(filepath, data, function(err) {
       if(err) {
@@ -30,7 +31,9 @@ ipcMain.on('newuser', (event, arg) => {
     console.log(arg);
     var user = arg;
     var userString = JSON.stringify(user);
-    saveFile("./keys/user.txt", userString);
+    var encryptedData = rsa.encrypt(userString);
+    saveFile("./keys/user.txt", encryptedData);
+    event.sender.send('newuser_resp', user);
 });
 
 ipcMain.on('newmodel', (event, arg) => {

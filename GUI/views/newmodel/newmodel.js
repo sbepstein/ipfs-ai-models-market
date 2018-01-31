@@ -37,10 +37,10 @@ angular.module('app.newmodel', ['ngRoute'])
             toastr.error("Error adding Model to IPFS");
           });*/
 
-      //add the data to blockchain
-      ipcRenderer.send('newmodel', $scope.model);
+      //add the data to userdata
 
-      
+
+
     };
 
 

@@ -1,6 +1,8 @@
 'use strict';
 
-var ipfs_url = "http://127.0.0.1:5001/api/v0/";
+var ipfsurl = "http://127.0.0.1:5001/api/v0/";
+var clienturl = "http://127.0.0.1:6001/";
+
 angular.module('app', [
     'ngRoute',
     'ngMessages',

@@ -38,7 +38,23 @@ angular.module('app.newmodel', ['ngRoute'])
           });*/
 
       //add the data to userdata
-
+      $http({
+              url: clienturl + 'model',
+              method: "POST",
+              headers: {
+                  "Content-Type": undefined
+              },
+              data: $scope.model
+          })
+          .then(function(data) {
+                  console.log("data: ");
+                  console.log(data.data);
+                  window.location="/";
+                  toastr.success("Model uploaded");
+              },
+              function(data) {
+                  console.log(data);
+              });
 
 
     };

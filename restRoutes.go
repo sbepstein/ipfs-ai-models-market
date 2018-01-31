@@ -22,6 +22,12 @@ var routes = Routes{
 		GetUser,
 	},
 	Route{
+		"PostModel",
+		"POST",
+		"/model",
+		PostModel,
+	},
+	Route{
 		"PostEncrypt",
 		"POST",
 		"/encrypt/{keyid}",

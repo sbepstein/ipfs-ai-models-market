@@ -3,16 +3,21 @@
     <h4 class="card-title">
             <b>{{user.username}}</b>
         </h4>
-      <img ng-src="http://localhost:8080/ipfs/{{user.imghash}}" style="max-width:200px;" />
+      <img ng-show="user.imghash" ng-src="http://localhost:8080/ipfs/{{user.imghash}}" style="max-width:200px;" />
+      <img ng-show="!user.imghash" ng-src="https://pbs.twimg.com/profile_images/758772276225511424/wy94KdDc_400x400.jpg" style="max-width:100px;" />
     <p>{{user.description}}</p>
     <p>
       {{user.email}}
     </p>
-    <p>
-      {{user.languages}}
+    <p ng-show="user.github">
+      <a ng-href="https://github.com/{{user.github}}" target="_blank">
+        <i title="User" class="fa fa-github fa-1x"></i>{{user.github}}
+      </a>
     </p>
-    <p>
-      {{user.location}}
+    <p ng-show="user.twitter">
+        <a ng-href="https://twitter.com/{{user.twitter}}" target="_blank">
+          <i title="User" class="fa fa-twitter fa-1x"></i>@{{user.twitter}}
+        </a>
     </p>
   </div>
 </div>

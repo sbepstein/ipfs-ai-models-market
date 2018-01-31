@@ -14,6 +14,7 @@ angular.module('app.newuser', ['ngRoute'])
     $scope.user = {};
 
     $scope.createUser = function() {
+      toastr.info("Generating RSA Key pair");
       //add the user to storage
       $http({
               url: clienturl + 'createuser',
